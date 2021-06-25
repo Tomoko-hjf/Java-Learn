@@ -1,0 +1,7 @@
+2021-06-25 17:37:07,868 DEBUG [main] (log4j.TestLog4j log4j.TestLog4j.main(TestLog4j.java:18)) - 调试信息
+ 2021-06-25 17:37:08,871 WARN [main] (log4j.TestLog4j log4j.TestLog4j.main(TestLog4j.java:20)) - 警告信息
+ 2021-06-25 17:41:32,375 DEBUG [main] (log4j.TestLog4j log4j.TestLog4j.main(TestLog4j.java:18)) 0 - 调试信息
+ 2021-06-25 17:41:33,384 WARN [main] (log4j.TestLog4j log4j.TestLog4j.main(TestLog4j.java:20)) 1009 - 警告信息
+ 2021-06-25 18:17:51,957 DEBUG [main] (log4j.TestLog4j log4j.TestLog4j.main(TestLog4j.java:18)) - 调试信息
+ 2021-06-25 18:19:05,042 WARN [main] (log4j.TestLog4j log4j.TestLog4j.main(TestLog4j.java:20)) - 警告信息
+ 
