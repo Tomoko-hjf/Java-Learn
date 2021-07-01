@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learn.mybatis.mapper.UserMapper">
+
+    <resultMap type="com.learn.mybatis.entity.User" id="getOrder2map">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="password" column="password" />
+        <result property="age" column="age" />
+        <result property="birthday" column="birthday" />
+        <result property="desc" column="desc" />
+    </resultMap>
+    <select id="findUsersByName" parameterType="java.lang.String" resultMap="getOrder2map">
+        select * from t_user where name like '%${value}%'
+    </select>
+
+<!--    <select id="findUserById" parameterType="int" resultType="com.learn.mybatis.entity.User">-->
+<!--        select * from t_user where id = #{id}-->
+<!--    </select>-->
+
+<!--    <insert id="insertUser" parameterType="com.learn.mybatis.entity.User">-->
+<!--        &lt;!&ndash; selectKey将主键返回，需要再返回 &ndash;&gt;-->
+<!--        <selectKey keyProperty="id" order="AFTER"-->
+<!--                   resultType="java.lang.Integer">-->
+<!--            select LAST_INSERT_ID()-->
+<!--        </selectKey>-->
+<!--        insert into t_user(name,password,age,birthday)-->
+<!--        values(#{name},#{password},#{age},#{birthday});-->
+<!--    </insert>-->
+
+    <select id="findUserList" parameterType="com.learn.mybatis.entity.QueryVO" resultType="com.learn.mybatis.entity.User">
+        SELECT * FROM t_user where name like '%${user.name}%'
+    </select>
+</mapper>
